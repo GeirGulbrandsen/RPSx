@@ -1,0 +1,13 @@
+* Can we play a game?
+* Create a player
+* Get name of player
+* give the player an attack
+* Create another user
+* Is the fight evaluated correctly for one set?
+Can we choose attack?
+
+
+Are we greeted when starting the game?
+Can we choose opponent?
+Can we play multiple games?
+Do we keep score?
