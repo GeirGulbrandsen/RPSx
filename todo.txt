@@ -1,13 +1,52 @@
-* Can we play a game?
-* Create a player
-* Get name of player
-* give the player an attack
-* Create another user
-* Is the fight evaluated correctly for one set?
-Can we choose attack?
+Can we evaluate a fight?
+Create a computer player
+Give the player a weapon
+Create another computer player
+Can we play a game between to players?
+Give the player a random weapon
+Create a human player
+Get human player's weapon
+Get name of player
 
 
 Are we greeted when starting the game?
 Can we choose opponent?
 Can we play multiple games?
 Do we keep score?
+
+RPS:
+Rock     0
+Paper    1
+Scissors 2
+
+RPSSL:
+
+Rock     0
+Paper    1
+Scissors 2
+Spock    3
+Lizard   4
+
+Notice that every move beats two moves:
+
+The move previous to it in the cycle (or four cases ahead)
+The move two cases ahead in the cycle
+So let d = (5 + a - b) % 5. Then:
+
+d = 1 or d = 3 => a wins
+d = 2 or d = 4 => b wins
+d = 0 => tie
+For the Rock-Paper-Scissor version:
+
+let d = (3 + a - b) % 3. Then:
+
+d = 1 => a wins
+d = 2 => b wins
+d = 0 => tie
+Generalization For n >= 3 and n odd:
+
+Let d = (n + a - b) % n. Then:
+
+If d = 0 => tie
+If d % 2 = 1 => a wins
+If d % 2 = 0 => b wins
