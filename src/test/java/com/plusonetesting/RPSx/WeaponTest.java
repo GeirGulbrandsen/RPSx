@@ -35,22 +35,33 @@ public class WeaponTest {
     }
 
     @Test
-    public void scissorsShouldBeatPaper() {
-        assertThat(evaluate("Rock", "Scissors"), is(equalTo("You WIN!!")));
+    public void paperShouldLoseToScissors() {
+        assertThat(evaluate("Paper", "Scissors"), is(equalTo("You LOSE!!")));
     }
 
     @Test
-    public void scissorsShouldLoseToRock() {
-        assertThat(evaluate("Scissors", "Rock"), is(equalTo("You LOSE!!")));
+    public void paperShouldBeatSpock() {
+        assertThat(evaluate("Paper", "Spock"), is(equalTo("You WIN!!")));
     }
 
     @Test
-    public void paperShouldBeatRock() {
-        assertThat(evaluate("Rock", "Scissors"), is(equalTo("You WIN!!")));
+    public void paperShouldLoseToLizard() {
+        assertThat(evaluate("Paper", "Lizard"), is(equalTo("You LOSE!!")));
     }
 
     @Test
-    public void scissorsShouldLoseToScissors() {
-        assertThat(evaluate("Scissors", "Rock"), is(equalTo("You LOSE!!")));
+    public void scissorsShouldLoseToSpock() {
+        assertThat(evaluate("Scissors", "Spock"), is(equalTo("You LOSE!!")));
     }
+
+    @Test
+    public void scissorsShouldBeatLizard() {
+        assertThat(evaluate("Scissors", "Lizard"), is(equalTo("You WIN!!")));
+    }
+
+    @Test
+    public void spockShouldLoseToLizard() {
+        assertThat(evaluate("Spock", "Lizard"), is(equalTo("You LOSE!!")));
+    }
+
 }
