@@ -17,15 +17,21 @@ public enum Weapon {
     }
 
     /**
-     *
      * @param player1Weapon String
      * @param player2Weapon String
      * @return Does player1Weapon beat player2Weapon? true/false
      */
-     static boolean evaluate(String player1Weapon, String player2Weapon) {
+    static String evaluate(String player1Weapon, String player2Weapon) {
 
-         int d = numberOfWeapons + valueOf(player1Weapon.toUpperCase()).getNumVal() - valueOf(player2Weapon.toUpperCase()).getNumVal();
-
-        return ((d % numberOfWeapons) % 2) == 1;
-     }
+        if (valueOf(player1Weapon.toUpperCase()).getNumVal() == valueOf(player2Weapon.toUpperCase()).getNumVal()) {
+            return "It's a tie.";
+        } else {
+            int d = numberOfWeapons + valueOf(player1Weapon.toUpperCase()).getNumVal() - valueOf(player2Weapon.toUpperCase()).getNumVal();
+            if (((d % numberOfWeapons) % 2) == 1) {
+                return "You WIN!!";
+            } else {
+                return "You LOSE!!";
+            }
+        }
+    }
 }
