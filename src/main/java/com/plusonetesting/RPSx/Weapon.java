@@ -23,10 +23,13 @@ public enum Weapon {
      */
     static String evaluate(String player1Weapon, String player2Weapon) {
 
-        if (valueOf(player1Weapon.toUpperCase()).getNumVal() == valueOf(player2Weapon.toUpperCase()).getNumVal()) {
+        int weapon1 = valueOf(player1Weapon.toUpperCase()).getNumVal();
+        int weapon2 = valueOf(player2Weapon.toUpperCase()).getNumVal();
+
+        if (weapon1 == weapon2) {
             return "It's a tie.";
         } else {
-            int d = numberOfWeapons + valueOf(player1Weapon.toUpperCase()).getNumVal() - valueOf(player2Weapon.toUpperCase()).getNumVal();
+            int d = numberOfWeapons + weapon1 - weapon2;
             if (((d % numberOfWeapons) % 2) == 1) {
                 return "You WIN!!";
             } else {
