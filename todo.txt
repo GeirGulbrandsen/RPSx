@@ -1,7 +1,7 @@
 * Can we evaluate a fight?
 * Create a computer player
 * Give the player a weapon
-Can we play a game between two players?
+* Can we play a game between two players?
 Give the player a random weapon
 Create a human player
 Get human player's weapon
