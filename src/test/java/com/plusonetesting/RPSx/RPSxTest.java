@@ -2,7 +2,7 @@ package com.plusonetesting.RPSx;
 
 import org.junit.Test;
 
-import static com.plusonetesting.RPSx.RPSx.evaluate;
+import static com.plusonetesting.RPSx.Weapon.evaluate;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
