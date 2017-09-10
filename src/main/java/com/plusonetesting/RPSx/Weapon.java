@@ -3,7 +3,9 @@ package com.plusonetesting.RPSx;
 public enum Weapon {
     ROCK(0),
     PAPER(1),
-    SCISSORS(2);
+    SCISSORS(2),
+    SPOCK(3),
+    LIZARD(4);
 
     private int numVal;
     private static int numberOfWeapons = Weapon.values().length;

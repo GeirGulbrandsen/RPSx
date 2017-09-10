@@ -10,11 +10,6 @@ import static org.junit.Assert.assertThat;
 public class WeaponTest {
 
     @Test
-    public void rockShouldBeatScissors() {
-        assertThat(evaluate("Rock", "Scissors"), is(equalTo("You WIN!!")));
-    }
-
-    @Test
     public void rockShouldTieWithRock() {
         assertThat(evaluate("Rock", "Rock"), is(equalTo("It's a tie.")));
     }
@@ -22,6 +17,21 @@ public class WeaponTest {
     @Test
     public void rockShouldLoseToPaper() {
         assertThat(evaluate("Rock", "Paper"), is(equalTo("You LOSE!!")));
+    }
+
+    @Test
+    public void rockShouldBeatScissors() {
+        assertThat(evaluate("Rock", "Scissors"), is(equalTo("You WIN!!")));
+    }
+
+    @Test
+    public void rockShouldLoseToSpock() {
+        assertThat(evaluate("Rock", "Spock"), is(equalTo("You LOSE!!")));
+    }
+
+    @Test
+    public void rockShouldBeatLizard() {
+        assertThat(evaluate("Rock", "Lizard"), is(equalTo("You WIN!!")));
     }
 
     @Test
