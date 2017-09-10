@@ -6,6 +6,7 @@ public enum Weapon {
     SCISSORS(2);
 
     private int numVal;
+    private static int numberOfWeapons = Weapon.values().length;
 
     Weapon(int numVal) {
         this.numVal = numVal;
@@ -15,8 +16,16 @@ public enum Weapon {
         return numVal;
     }
 
-    static boolean evaluate(String player1Weapon, String player2Weapon) {
+    /**
+     *
+     * @param player1Weapon String
+     * @param player2Weapon String
+     * @return Does player1Weapon beat player2Weapon? true/false
+     */
+     static boolean evaluate(String player1Weapon, String player2Weapon) {
 
-        return valueOf(player1Weapon.toUpperCase()).getNumVal() < valueOf(player2Weapon.toUpperCase()).getNumVal();
-    }
+         int d = numberOfWeapons + valueOf(player1Weapon.toUpperCase()).getNumVal() - valueOf(player2Weapon.toUpperCase()).getNumVal();
+
+        return ((d % numberOfWeapons) % 2) == 1;
+     }
 }
